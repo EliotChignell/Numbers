@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-y: scroll;
+}
+
+.stats {
+    margin: 15px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background-color: white;
+
+    display: block;
+    position: fixed;
+    top: 0;
+}
+.buttons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.otherContent {
+    margin: 4px;
+    overflow-y: scroll;
+}
+.numbers, .upgrades, .packs {
+    border-bottom: 1px solid black;
+    margin: 15px;
+    display: block;
+}
+.showhideNumbers, .showhidePacks, .showhideUpgrades {
+    font-size: 20px;
+    text-decoration:  none;
+    color: deepskyblue;
+}
+.packContent, .upgradeContent {
+    margin-bottom: 10px;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.get {
+    color: deepskyblue;
+    text-decoration: none;
+    font-size: 20px;
+    text-weight: bold;
+}
+
+#cashBtn {
+    width: 100%;
+    font-size: 30px;
+    background-color: darkgoldenrod;
+    border-radius: 10px;
+}
+
+/* Ripple Effect */
+.ripple {
+    position: relative;
+    border: none;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ripple:after {
+    content: "";
+    background: white;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.ripple:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+/* ------------------------------- */
