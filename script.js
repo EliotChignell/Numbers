@@ -75,7 +75,7 @@ function showHide(div) {
 
 function sortNumbers() {
     requestAnimationFrame(sortNumbers);
-    j.numbers.sort(function(a,b){return a-b});
+    j.numbers.prototype.sort(function(a,b){return a-b});
 }
 
 function moreCash() {
