@@ -28,6 +28,10 @@ var j = {
                     '<p>50-100 <a class="get fr" onclick="getPack(100)">Get</a></p>'
 };
 
+function randomInt(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 function updateHTML() {
     requestAnimationFrame(updateHTML);
     h.cash.innerHTML = 'Cash: '+j.cash;
@@ -119,12 +123,16 @@ function getPack(num) {
 }
 
 function openPack(num) {
+    alert('Press OK to open pack.');
     if (num === 10) {
-        //
+        content = randomInt(1,10);
+        j.numbers += content;
+        alert('You got the number'+content);
+        content = 0;
     } else if (num === 50) {
-        //
+
     } else if (num === 100) {
-        //
+
     }
 }
 
