@@ -120,7 +120,7 @@ function getPack(num) {
 
 function openPack(num) {
     if (num === 10) {
-        // Lel
+        //
     } else if (num === 50) {
         //
     } else if (num === 100) {
