@@ -118,7 +118,15 @@ function getPack(num) {
     }
 }
 
-function openPack(num) {}
+function openPack(num) {
+    if (num === 10) {
+        //
+    } else if (num === 50) {
+        //
+    } else if (num === 100) {
+        //
+    }
+}
 
 // Onclick events
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
