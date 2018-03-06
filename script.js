@@ -49,7 +49,7 @@ function showHide(div) {
             } else {
                 h.numberContent.innerHTML = j.numbers;
             }
-        } else if (!j.showNumbers) {
+        } else {
             h.showHideNumbers.innerHTML = 'Show';
             j.showNumbers = true;
             h.numberContent.innerHTML = '';
@@ -59,7 +59,7 @@ function showHide(div) {
             h.showHidePacks.innerHTML = 'Hide';
             j.showPacks = false;
             h.packContent.innerHTML = j.packsInnerHTML;
-        } else if (!j.showPacks) {
+        } else {
             h.showHidePacks.innerHTML = 'Show';
             j.showPacks = true;
             h.packContent.innerHTML = '';
@@ -69,7 +69,7 @@ function showHide(div) {
             h.showHideUpgrades.innerHTML = 'Hide';
             j.showUpgrades = false;
             h.upgradeContent.innerHTML = j.numbers;
-        } else if (!j.showUpgrades) {
+        } else {
             h.showHideUpgrades.innerHTML = 'Show';
             j.showUpgrades = true;
             h.upgradeContent.innerHTML = '';
