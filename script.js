@@ -44,7 +44,11 @@ function showHide(div) {
         if (j.showNumbers) {
             h.showHideNumbers.innerHTML = 'Hide';
             j.showNumbers = false;
-            h.numberContent.innerHTML = j.numbers;
+            if (j.numbers.length <= 0) {
+                h.numberContent.innerHTML = 'No Numbers';
+            } else {
+                h.numberContent.innerHTML = j.numbers;
+            }
         } else if (!j.showNumbers) {
             h.showHideNumbers.innerHTML = 'Show';
             j.showNumbers = true;
