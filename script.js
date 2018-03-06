@@ -19,7 +19,7 @@ var j = {
     showNumbers:  false,
     showPacks:    false,
     showUpgrades: false,
-    numbers:      [0],
+    numbers:      [],
     // Upgrades inner HTML
     upgradesInnerHTML: '',
     // Packs inner HTML
@@ -75,7 +75,7 @@ function showHide(div) {
 
 function sortNumbers() {
     requestAnimationFrame(sortNumbers);
-    j.numbers.prototype.sort(function(a,b){return a-b});
+    j.numbers.sort();
 }
 
 function moreCash() {
@@ -126,8 +126,8 @@ function openPack(num) {
     alert('Press OK to open pack.');
     if (num === 10) {
         content = randomInt(1,10);
-        j.numbers += content;
-        alert('You got the number'+content);
+        j.numbers.push(content);
+        alert('You got the number: '+content+'!');
         content = 0;
     } else if (num === 50) {
 
