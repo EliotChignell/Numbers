@@ -16,9 +16,9 @@ var h = {
 var j = {
     cash:         0,
     cashPC:       1,
-    showNumbers:  false,
-    showPacks:    false,
-    showUpgrades: false,
+    showNumbers:  true,
+    showPacks:    true,
+    showUpgrades: true,
     numbers:      [],
     // Upgrades inner HTML
     upgradesInnerHTML: '',
@@ -65,13 +65,13 @@ function showHide(div) {
             h.packContent.innerHTML = '';
         }
     } else if (div == 'upgrades') {
-        if (j.showNumbers) {
+        if (j.showUpgrades) {
             h.showHideUpgrades.innerHTML = 'Hide';
-            j.showNumbers = false;
+            j.showUpgrades = false;
             h.upgradeContent.innerHTML = j.numbers;
-        } else if (!j.showNumbers) {
+        } else if (!j.showUpgrades) {
             h.showHideUpgrades.innerHTML = 'Show';
-            j.showNumbers = true;
+            j.showUpgrades = true;
             h.upgradeContent.innerHTML = '';
         }
     }
