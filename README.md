@@ -7,4 +7,4 @@
 - Also you can use cash to buy packs which will contain a "number".
 - Try to collect as many numbers as you can!
 
-This game is very early in development don't 
+This game is very early in development don't judge
