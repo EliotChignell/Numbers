@@ -41,40 +41,40 @@ function updateHTML() {
 
 function showHide(div) {
     switch(div) {
-        case "numbers":
-        if (j.showNumbers) {
-            h.showHideNumbers.innerHTML = 'Hide';
-            j.showNumbers = false;
-            if (j.numbers.length <= 0) {
-                h.numberContent.innerHTML = 'No Numbers';
+        case 'numbers':
+            if (j.showNumbers) {
+                h.showHideNumbers.innerHTML = 'Hide';
+                j.showNumbers = false;
+                if (j.numbers.length <= 0) {
+                    h.numberContent.innerHTML = 'No Numbers';
+                } else {
+                    h.numberContent.innerHTML = j.numbers;
+                }
             } else {
-                h.numberContent.innerHTML = j.numbers;
+                h.showHideNumbers.innerHTML = 'Show';
+                j.showNumbers = true;
+                h.numberContent.innerHTML = '';
             }
-        } else {
-            h.showHideNumbers.innerHTML = 'Show';
-            j.showNumbers = true;
-            h.numberContent.innerHTML = '';
-        }
-    } else if (div == 'packs') {
-        if (j.showPacks) {
-            h.showHidePacks.innerHTML = 'Hide';
-            j.showPacks = false;
-            h.packContent.innerHTML = j.packsInnerHTML;
-        } else {
-            h.showHidePacks.innerHTML = 'Show';
-            j.showPacks = true;
-            h.packContent.innerHTML = '';
-        }
-    } else if (div == 'upgrades') {
-        if (j.showUpgrades) {
-            h.showHideUpgrades.innerHTML = 'Hide';
-            j.showUpgrades = false;
-            h.upgradeContent.innerHTML = j.numbers;
-        } else {
-            h.showHideUpgrades.innerHTML = 'Show';
-            j.showUpgrades = true;
-            h.upgradeContent.innerHTML = '';
-        }
+        case 'packs': 
+            if (j.showPacks) {
+                h.showHidePacks.innerHTML = 'Hide';
+                j.showPacks = false;
+                h.packContent.innerHTML = j.packsInnerHTML;
+            } else {
+                h.showHidePacks.innerHTML = 'Show';
+                j.showPacks = true;
+                h.packContent.innerHTML = '';
+            }
+            case 'upgrades':
+                if (j.showUpgrades) {
+                    h.showHideUpgrades.innerHTML = 'Hide';
+                    j.showUpgrades = false;
+                h.upgradeContent.innerHTML = j.numbers;
+                } else {
+                    h.showHideUpgrades.innerHTML = 'Show';
+                    j.showUpgrades = true;
+                    h.upgradeContent.innerHTML = '';
+                }
     }
 }
 
