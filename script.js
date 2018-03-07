@@ -55,6 +55,7 @@ function showHide(div) {
                 j.showNumbers = true;
                 h.numberContent.innerHTML = '';
             }
+            break;
         case 'packs': 
             if (j.showPacks) {
                 h.showHidePacks.innerHTML = 'Hide';
@@ -65,16 +66,18 @@ function showHide(div) {
                 j.showPacks = true;
                 h.packContent.innerHTML = '';
             }
-            case 'upgrades':
-                if (j.showUpgrades) {
-                    h.showHideUpgrades.innerHTML = 'Hide';
-                    j.showUpgrades = false;
-                h.upgradeContent.innerHTML = j.numbers;
-                } else {
-                    h.showHideUpgrades.innerHTML = 'Show';
-                    j.showUpgrades = true;
-                    h.upgradeContent.innerHTML = '';
-                }
+        break;
+        case 'upgrades':
+            if (j.showUpgrades) {
+                h.showHideUpgrades.innerHTML = 'Hide';
+                j.showUpgrades = false;
+            h.upgradeContent.innerHTML = j.numbers;
+            } else {
+                h.showHideUpgrades.innerHTML = 'Show';
+                j.showUpgrades = true;
+                h.upgradeContent.innerHTML = '';
+            }
+        break;
     }
 }
 
