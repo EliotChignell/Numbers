@@ -40,7 +40,7 @@ function updateHTML() {
 }
 
 function showHide(div) {
-    if (div == 'numbers') {
+    switch(div) {
         if (j.showNumbers) {
             h.showHideNumbers.innerHTML = 'Hide';
             j.showNumbers = false;
