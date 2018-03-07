@@ -41,6 +41,7 @@ function updateHTML() {
 
 function showHide(div) {
     switch(div) {
+        case "numbers":
         if (j.showNumbers) {
             h.showHideNumbers.innerHTML = 'Hide';
             j.showNumbers = false;
