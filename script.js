@@ -16,9 +16,9 @@ var h = {
 var j = {
     cash:         0,
     cashPC:       1,
-    showNumbers:  false,
-    showPacks:    false,
-    showUpgrades: false,
+    showNumbers:  true,
+    showPacks:    true,
+    showUpgrades: true,
     numbers:      [],
     // Upgrades inner HTML
     upgradesInnerHTML: '',
@@ -40,40 +40,44 @@ function updateHTML() {
 }
 
 function showHide(div) {
-    if (div == 'numbers') {
-        if (j.showNumbers) {
-            h.showHideNumbers.innerHTML = 'Hide';
-            j.showNumbers = false;
-            if (j.numbers.length <= 0) {
-                h.numberContent.innerHTML = 'No Numbers';
+    switch(div) {
+        case 'numbers':
+            if (j.showNumbers) {
+                h.showHideNumbers.innerHTML = 'Hide';
+                j.showNumbers = false;
+                if (j.numbers.length <= 0) {
+                    h.numberContent.innerHTML = 'No Numbers';
+                } else {
+                    h.numberContent.innerHTML = j.numbers;
+                }
             } else {
-                h.numberContent.innerHTML = j.numbers;
+                h.showHideNumbers.innerHTML = 'Show';
+                j.showNumbers = true;
+                h.numberContent.innerHTML = '';
             }
-        } else if (!j.showNumbers) {
-            h.showHideNumbers.innerHTML = 'Show';
-            j.showNumbers = true;
-            h.numberContent.innerHTML = '';
-        }
-    } else if (div == 'packs') {
-        if (j.showPacks) {
-            h.showHidePacks.innerHTML = 'Hide';
-            j.showPacks = false;
-            h.packContent.innerHTML = j.packsInnerHTML;
-        } else if (!j.showPacks) {
-            h.showHidePacks.innerHTML = 'Show';
-            j.showPacks = true;
-            h.packContent.innerHTML = '';
-        }
-    } else if (div == 'upgrades') {
-        if (j.showNumbers) {
-            h.showHideUpgrades.innerHTML = 'Hide';
-            j.showNumbers = false;
+            break;
+        case 'packs': 
+            if (j.showPacks) {
+                h.showHidePacks.innerHTML = 'Hide';
+                j.showPacks = false;
+                h.packContent.innerHTML = j.packsInnerHTML;
+            } else {
+                h.showHidePacks.innerHTML = 'Show';
+                j.showPacks = true;
+                h.packContent.innerHTML = '';
+            }
+        break;
+        case 'upgrades':
+            if (j.showUpgrades) {
+                h.showHideUpgrades.innerHTML = 'Hide';
+                j.showUpgrades = false;
             h.upgradeContent.innerHTML = j.numbers;
-        } else if (!j.showNumbers) {
-            h.showHideUpgrades.innerHTML = 'Show';
-            j.showNumbers = true;
-            h.upgradeContent.innerHTML = '';
-        }
+            } else {
+                h.showHideUpgrades.innerHTML = 'Show';
+                j.showUpgrades = true;
+                h.upgradeContent.innerHTML = '';
+            }
+        break;
     }
 }
 
